@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>鹤壁汽车工程职业学院|中专部</title>
+    <script>
+        function BrowserType() {
+            var isGoOnpage = true;
+            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+            var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器
+            // var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器
+            var isIE = window.ActiveXObject || "ActiveXObject" in window
+            // var isEdge = userAgent.indexOf("Windows NT 6.1; Trident/7.0;") > -1 && !isIE; //判断是否IE的Edge浏览器
+            var isEdge = userAgent.indexOf("Edge") > -1; //判断是否IE的Edge浏览器
+            var isFF = userAgent.indexOf("Firefox") > -1; //判断是否Firefox浏览器
+            var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1; //判断是否Safari浏览器
+            var isChrome = userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Safari") > -1 && !isEdge; //判断Chrome浏览器
+        
+            if (isIE) {
+                var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                reIE.test(userAgent);
+                var fIEVersion = parseFloat(RegExp["$1"]);
+                if (userAgent.indexOf('MSIE 6.0') != -1) {
+                isGoOnpage = false;
+                return isGoOnpage;
+                } else if (fIEVersion == 7) {
+                isGoOnpage = false;
+                return isGoOnpage;
+                }
+                else if (fIEVersion == 8) {
+                isGoOnpage = false;
+                return isGoOnpage;
+                }
+                else if (fIEVersion == 9) {
+                isGoOnpage = false;
+                return isGoOnpage;
+                }
+                else if (fIEVersion == 10) {
+                isGoOnpage = false;
+                return isGoOnpage;
+                }
+                else if (userAgent.toLowerCase().match(/rv:([\d.]+)\) like gecko/)) {
+                return isGoOnpage;
+                }
+                else {
+                isGoOnpage = false;
+                return isGoOnpage
+                }//IE版本过低
+            }//isIE end
+        
+            if (isFF) { return "FF"; }
+            if (isOpera) { return "Opera"; }
+            if (isSafari) { return "Safari"; }
+            if (isChrome) { return "Chrome"; }
+            if (isEdge) { return "Edge"; }
+        
+            }//myBrowser() end
+        
+            function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                const mUrl = location.origin +'/m'+location.pathname+ location.search;
+            //   console.log(mUrl);
+                location.href = mUrl;
+                // location.href = 'http://o.cdwyh.com';
+            }
+            }
+            browserRedirect();
+            if (!BrowserType()) {
+            alert("浏览器版本过低，请升级您的浏览器或者使用谷歌浏览器进行观看。")
+            }
+    </script>
+    <link rel="stylesheet" href="//cdn.staticfile.org/animate.css/3.5.0/animate.min.css">
+    <link rel="stylesheet" href="./css/zty.css">
+    <script src="//cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdn.staticfile.org/wow/1.1.2/wow.min.js"></script>
+ 
+</head>
+<body>
+    <div class="fvbanner">
+        <div class="w1200 clearfix">
+                <div class="wow bounceInDown" data-wow-delay="0.3s"><img class="kcd wow swing" data-wow-delay="0.3s" src="./img/kaicedao.png" alt=""></div>
+                <!-- <img class="wndb wow flipInX " data-wow-delay="0.2s" src="./img/wndb.png" alt=""> -->
+                <p class="wow fadeInUp" style="margin-left:60px;" data-wow-delay="0.3s">升学有保障，就业有前途</p>
+                <p class="wow fadeInUp" data-wow-delay="0.3s">高学历，多途径成才</p>
+                <img class="ren wow fadeInUp" data-wow-delay="0.2s" src="./img/renwu.png" alt="">
+               
+        </div>
+    </div>
+    <!-- 介绍 -->
+    <div class="w1200 clearfix">
+        <div class="bxjs">
+            <p class="top_title wow bounceIn" data-wow-delay="0.3s">班型介绍</p>
+            <div class="textBox wow rotateInUpRight" data-wow-delay="0.3s">
+                <div class="imgBox wow rotateIn" data-wow-delay="0.5s"><img src="./img/bxjsImg.png" alt=""></div>
+                <div class="cardBox">
+                    <li style="margin-left:70px;" class="wow bounceInRight" data-wow-delay="0.6s" ><span><em>初中起点</em></span></li><li class="wow bounceInRight" data-wow-delay="0.7s"><span><em>中职3年+专科3年学制</em></span></li><li class="last wow bounceInRight" data-wow-delay="0.6s"><span><em>生活补助</em></span></li>
+                    <p class="text">
+                        由于企业单位对人才素质要求越来越高，对高学历求职者的需求也越来越大，为满足学生想要提升学历的需求；学校引进国内高等院校资源，开展初中起点“3+3”中高职升学班，学院通过理论、实践结合，实行技能教育与职业培训并举、教育与企业培养相结合的办学模式让学生顺利就读国内高等院校，获得高学历文凭，确保学生走出校门成为适应社会和市场需求的高技能人才。
+                    </p>
+                </div>
+            </div>
+        </div>
+   </div>
+  <!-- jiaolang1 -->
+  <div class="jiaolang1"></div>
+   <!-- 招生专业 -->
+   <div class="zszy">
+       <div class="w1200 clearfix">
+        <p class="top_title wow bounceIn" data-wow-delay="0.3s">招生专业</p>
+           <ul>
+               <li class=" wow bounceIn " data-wow-delay="0.4s" data-wow-offset="200" >
+                   <a href="javascript:;">
+                       <div class="imgBox" ><img src="./img/zyImg1.png" alt=""></div>
+                       <p class="wow bounceIn " data-wow-delay="0.5s" >汽车检测与维修技术</p>
+                   </a>
+                   <div class="btnList">
+                       <a href="javascript:;" class="wow bounceIn zxbm redBtn" data-wow-delay="0.6s" data-wow-offset="100"><i></i><span>在线报名</span> <i></i></a>
+                       <a href="javascript:;" class="wow bounceIn jyqq wBtn" data-wow-delay="0.6s" data-wow-offset="100" ><i></i><span>就业前景</span> <i></i></a>
+                   </div>
+               </li>
+               <li class=" wow bounceIn " data-wow-delay="0.4s" data-wow-offset="100">
+                    <a href="javascript:;">
+                        <div class="imgBox" ><img src="./img/zyImg2.png" alt=""></div>
+                        <p class="wow bounceIn " data-wow-delay="0.5s" data-wow-offset="100">机电一体化技术</p>
+                    </a>
+                    <div class="btnList">
+                        <a href="javascript:;" class="wow bounceIn zxbm redBtn" data-wow-offset="100" data-wow-delay="0.6s"><i></i><span>在线报名</span> <i></i></a>
+                        <a href="javascript:;" class="wow bounceIn jyqq wBtn" data-wow-offset="100" data-wow-delay="0.6s" ><i></i><span>就业前景</span> <i></i></a>
+                    </div>
+                </li>
+                <li class=" wow bounceIn " data-wow-delay="0.4s" data-wow-offset="100">
+                    <a href="javascript:;">
+                        <div class="imgBox" ><img src="./img/zyImg3.png" alt=""></div>
+                        <p class="wow bounceIn " data-wow-delay="0.5s" >会计</p>
+                    </a>
+                    <div class="btnList">
+                        <a href="javascript:;" class="wow bounceIn zxbm redBtn" data-wow-offset="100" data-wow-delay="0.6s"><i></i><span>在线报名</span> <i></i></a>
+                        <a href="javascript:;" class="wow bounceIn jyqq wBtn" data-wow-delay="0.6s" data-wow-offset="100" ><i></i><span>就业前景</span> <i></i></a>
+                    </div>
+                </li>
+                <li class=" wow bounceIn " data-wow-delay="0.4s" data-wow-offset="100" >
+                    <a href="javascript:;">
+                        <div class="imgBox"  ><img src="./img/zyImg4.png" alt=""></div>
+                        <p class="wow bounceIn " data-wow-delay="0.5s" data-wow-offset="100" >电子商务</p>
+                    </a>
+                    <div class="btnList">
+                        <a href="javascript:;" class="wow bounceIn zxbm redBtn" data-wow-delay="0.6s" data-wow-offset="100"><i></i><span>在线报名</span> <i></i></a>
+                        <a href="javascript:;" class="wow bounceIn jyqq wBtn" data-wow-delay="0.6s" data-wow-offset="100" ><i></i><span>就业前景</span> <i></i></a>
+                    </div>
+                </li>
+                <li class=" wow bounceIn " data-wow-delay="0.4s" data-wow-offset="100" >
+                    <a href="javascript:;">
+                        <div class="imgBox"  ><img src="./img/zyImg5.png" alt=""></div>
+                        <p class="wow bounceIn " data-wow-delay="0.5s" data-wow-offset="100">汽车营销与服务</p>
+                    </a>
+                    <div class="btnList">
+                        <a href="javascript:;" class="wow bounceIn zxbm redBtn" data-wow-delay="0.6s" data-wow-offset="100"><i></i><span>在线报名</span> <i></i></a>
+                        <a href="javascript:;" class="wow bounceIn jyqq wBtn" data-wow-delay="0.6s" data-wow-offset="100"><i></i><span>就业前景</span> <i></i></a>
+                    </div>
+                </li>
+                <li class="wow bounceIn " data-wow-delay="0.4s" data-wow-offset="100" >
+                    <a href="javascript:;">
+                        <div class="imgBox"  ><img src="./img/zyImg6.png" alt=""></div>
+                        <p class="wow bounceIn " data-wow-delay="0.5s" data-wow-offset="100" >计算机网络技术</p>
+                    </a>
+                    <div class="btnList">
+                        <a href="javascript:;" class="wow bounceIn zxbm redBtn " data-wow-delay="0.6s" data-wow-offset="100" ><i></i><span>在线报名</span> <i></i></a>
+                        <a href="javascript:;" class="wow bounceIn jyqq wBtn" data-wow-delay="0.6s" data-wow-offset="100" ><i></i><span>就业前景</span> <i></i></a>
+                    </div>
+                </li>
+           </ul>
+       </div>
+   </div>
+
+   <!-- 班级特色 -->
+   <div class="bjte">
+   <div class="w1200 clearfix">
+             <p class="topTitle3"  ><i class="wow bounceInLeft" data-wow-offset="200" data-wow-delay="0.3s" >·······</i><span class="wow bounceInUp" data-wow-offset="200" data-wow-delay="0.3s" >班级特色</span><i class="wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="200" >·······</i></p>
+             <p class="topTitle2 wow rotateIn" data-wow-offset="200" data-wow-delay="0.8s">高起点·严要求</p>
+             <ul>
+                 <li class="wow bounceInLeft" data-wow-delay="0.6s">
+                     <p class="title wow bounceInRight" data-wow-delay="0.7s" ><img src="./img/yzicon.png" alt="">优质的课程体系</p>
+                     <p class="text" >采用科学先进的教学模式，实现理论与实践融合，制定特色课程计划，在教学评价方面引入第三方企业评价，模块化教学的同时，将优秀企业、职业文化融入课堂教学，大胆培养出同时兼具“工匠精神”和专业技能的后备人才。</p>
+                 </li>
+                 <li class="wow bounceInLeft" data-wow-delay="0.7s">
+                    <p class="title wow bounceInRight" data-wow-delay="0.8s" ><img src="./img/zyicon.png" alt="">专业的管理团队</p>
+                    <p class="text">组织专业团队负责管理，在招生宣传、学生选拔、教学组织、学业引导、文化熏陶、心理疏导、出国学习等方面协助或组织开展工作。</p>
+                </li>
+                <li class="wow bounceInLeft" data-wow-delay="0.8s">
+                    <p class="title wow bounceInRight" data-wow-delay="0.9s" ><img src="./img/fficon.png" alt="">丰富的教育资源</p>
+                    <p class="text">学班依托学院丰富的教育资源，对接国内高等院校，让学生能顺利就读高职院校继续深造，提升学生社会就业竞争力。</p>
+                </li>
+             </ul>
+             <a href="javascript:;" class="redBtn more"><i></i><span>了解更多>></span><i></i></a>
+       </div>
+   </div>
+      <!-- 实训环境 -->
+       <div class="sxhj">
+            <div class="w1200 clearfix">
+                  <p class="topTitle"><i class="wow bounceInLeft icon1 " data-wow-offset="200" data-wow-delay="0.3s"></i><i class="wow bounceInLeft icon2" data-wow-offset="200" data-wow-delay="0.3s"></i><span class="wow bounceInUp " data-wow-offset="200" data-wow-delay="0.3s" >实训环境</span><i class="wow bounceInRight icon1 " data-wow-delay="0.3s" data-wow-offset="200"></i><i class="wow bounceInRight icon2" data-wow-delay="0.3s" data-wow-offset="200"></i></p>
+                <div class="cardBox">
+                    <ul>
+                        <li class="imgBox wow rotateIn col " data-wow-delay="0.2s">
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <div class="box" >
+                                <img src="./img/show1.png" alt="">
+                            </div>
+                        </li>
+                        <li class="imgBox wow  rotateIn col " data-wow-delay="0.3s" >   
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <div class="box" >
+                                <img src="./img/show2.png" alt="">
+                            </div>
+                        </li>
+                        <li class="imgBox wow rotateIn col " data-wow-delay="0.4s"> 
+                                <a href="javascript:;"></a>
+                                <a href="javascript:;"></a>
+                                <a href="javascript:;"></a>
+                                <a href="javascript:;"></a>
+                                <div class="box" >
+                                    <img src="./img/show3.png" alt="">
+                                </div>
+                        </li>
+                        <li class="imgBox wow rotateIn col " data-wow-delay="0.5s"> 
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <div class="box" >
+                                <img src="./img/show4.png" alt="">
+                            </div>
+                        </li>
+                        <li class="imgBox wow rotateIn col " data-wow-delay="0.6s"> 
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <div class="box" >
+                                <img src="./img/show5.png" alt="">
+                            </div>
+                        </li>
+                        <li class="imgBox wow rotateIn col " data-wow-delay="0.9s"> 
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <div class="box" >
+                                <img src="./img/show6.png" alt="">
+                            </div>
+                        </li>
+                        <li class="imgBox wow rotateIn col " data-wow-delay="0.8s"> 
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <a href="javascript:;"></a>
+                            <div class="box" >
+                                <img src="./img/show7.png" alt="">
+                            </div>
+                        </li>
+                        <li class="imgBox wow rotateIn col " data-wow-delay="0.7s"> 
+                                <a href="javascript:;"></a>
+                                <a href="javascript:;"></a>
+                                <a href="javascript:;"></a>
+                                <a href="javascript:;"></a>
+                                <div class="box" >
+                                    <img src="./img/show8.png" alt="">
+                                </div>
+                        </li>
+                        <li class="imgBox wow rotateIn col " data-wow-delay="0.6s"> 
+                                <a href="javascript:;"></a>
+                                <a href="javascript:;"></a>
+                                <a href="javascript:;"></a>
+                                <a href="javascript:;"></a>
+                                <div class="box" >
+                                    <img src="./img/show9.png" alt="">
+                                </div>
+                        </li>
+                    </ul>
+                    <div class="textBox" >
+                         <p class="text">
+                                    学院“立足汽车行业、服务汽车产业、培养汽车人才、打造汽车品牌”，获批2个市级工程技术中心（鹤壁市汽车轻量化工程技术研究中心、鹤壁市新能源汽车技术工程技术研究中心）和1个市级重点实验室（鹤壁市新能源汽车动力系统重点实验室），有力地促进应用技术研发转化，服务地方新兴产业转型升级能力显著提升。同时拥有84个各类实验实训中心和实习场所，42个学生顶岗实习基地，更与中高国际教育科技集团、北京产教融合科学研究院和德国全球工业4.0研究院共建中德产教融合智造工匠学院、京东共建京东电子商务实训基地等，创建出设施设备齐全、场地氛围一流的实践教学环境。
+                         </p>
+                         <p class="textList"><span>2个市级工程技术中心</span><span>1个市级重点实验室</span><span>84个各类实验实训中心</span><span>京东电子商务实训基地</span> </p>
+                    </div>
+                    
+                </div>
+                  <a href="javascript:;" class="redBtn more"><i></i><span>了解更多>></span><i></i></a>
+
+            </div>
+        </div>
+        <!-- 就业前景 -->
+       <div class="jyqqBox">
+        <div class="w1200 clearfix">
+              <p class="topTitle"><i class="wow bounce icon1 " data-wow-offset="200" data-wow-delay="0.3s"></i><i class="wow bounce icon2" data-wow-offset="200" data-wow-delay="0.3s"></i><span class="wow bounceInUp " data-wow-offset="200" data-wow-delay="0.3s" >就业前景</span><i class="wow bounce icon1 " data-wow-delay="0.3s" data-wow-offset="200"></i><i class="wow bounce icon2" data-wow-delay="0.3s" data-wow-offset="200"  ></i></p>
+              <div class="cardBox">
+                <p class="text">
+                    学校针对市场需求，全面培养同时具备优秀综合素质、专业能力的学生，让学生成为真正的一专多能的复合型人才，使学生在当前严峻的就业环境下轻松化解就业压力。且开班专业均为热门专业，例如汽车相关人员的培养被纳入国家教育部“技能型紧缺人才培养工程”，<span>未来需求100万相关从业人员</span>；计算机网络行业市场每年<span>增长速度都保持在10%以上</span>，国家高新技术人才更是企业不可缺的技术骨干，<span>平均年薪也在全国平均水平的1.81倍</span>，这些都属于人才需求迫切的行业，贴近社会选择专业，学生毕业后更能符合企业人才需求标准,易于就业。
+                </p>
+                <img class="chImg" style="" src="./img/tschImg.png" alt="">
+             </div>
+             <p class="top_title wow bounceIn" data-wow-delay="0.3s" style="background-image: url('./img/toptitleBg2.png');width: 380px; margin: 40px auto;">升学有道，学历+就业双赢</p>
+             <ul>
+                 <li>
+                    <div class="box wow slideInUp" data-wow-delay=".6s">
+                     <p class="title"><img src="./img/hoticon.png" alt=""> <span>热门专业多</span></p>
+                     <p class="text">班级的开办专业都是紧跟着市场潮流，前景好的热门专业。如人才需求较大的汽车、电子商务专业、迅速发展的计算机专业等，保障学生对口就业，融入社会。 </p>
+                    </div>
+                    <p class="bottom" ></p>
+                </li>
+                <li>
+                    <div class="box wow " data-wow-delay="1s" >
+                        <p class="title"><img src="./img/nlicon.png" alt=""> <span>就业能力强</span></p>
+                        <p class="text">培养就业能力的“技能型”班级。学生经过系统化学习与培训后，不仅具备必要理论知识及所学专业技术，也更注重实际应用，强化学生职业技能，通过实习实训等环节，让学生掌握岗位实用技能，更符合社会需求。 </p>
+                    </div>
+                    <p class="bottom" style="background: #ea3676;"></p>
+                </li>
+                <li>
+                    <div class="box wow "  data-wow-delay="1.4s" >
+                        <p class="title"><img src="./img/kxicon.png" alt=""> <span>考学升职易</span></p>
+                        <p class="text">取得高等学历是考取某些资格证书的必备条件。如：工程师、建筑师等。如今很多职称评定也都要求大专及以上学历，不少单位的主管领导也都由高级职称的人担任，有一个高学历，同时也就有了更多的机会。 </p>
+                    </div>
+                    <p class="bottom" style="background: #5962e8;"></p>
+                </li>
+             </ul> 
+             <a href="javascript:;" class="redBtn more" style="background:#4835f8;"><i></i><span>了解更多>></span><i></i></a>
+        </div>
+    </div>
+   
+  <!-- jiaolang1 -->
+  <div class="jiaolang2"></div>
+    <!-- 预约表格 -->
+    <div  class="yyForm" id="yyForm_href" >
+        <div class="w1200 clearfix">
+                <p class="TopTitle"><i></i><i></i><i></i><i></i><span>立即提交信息预约，即可获得免费升学规划</span></p>
+                <div class="cardBox">
+                    <form action="" name="myV" id="myForm" class="form" >
+                          <div class="inuptBox radio-input">
+                              <label for="">我<span></span>是：</label>
+                              <input id="inc1" type="radio" name="inc" checked class="control-input" value="true">男生
+                              <input id="inc0" type="radio" name="inc" class="control-input" value="false">女生
+                          </div>
+                          <div class="inuptBox">
+                                <label for="">微<span></span>信：</label>
+                                <input name="wx" type="text">
+                                <!-- <i>*</i> -->
+                         </div>
+                         <div class="inuptBox">
+                                <label for="">姓<span></span>名：</label>
+                                <input name="xinmi" type="text">
+                                <i>*</i>
+                         </div>
+                         <div class="inuptBox">
+                                <label for="">教育阶段：</label>
+                                <dl class="select"><input type="text" placeholder="未填写" value="" tid="0" readonly disabled="disabled" ><i></i><div><ul><li><a href="javascript:;" tid="1" >高中</a></li><li><a href="javascript:;" tid="2" >专科</a></li><li><a href="javascript:;" tid="3" >本科</a></li></ul></div></dl>
+                         </div>
+                         <div class="inuptBox">
+                                <label for="">手<span></span>机：</label>
+                                <input type="phone">
+                                <i>*</i>
+                         </div>
+                         <div class="inuptBox">
+                                <label for="">意向专业：</label>
+                                <dl class="select"><input type="text" placeholder="未填写" value="" tid="0" readonly disabled="disabled" ><i></i><div><ul><li><a href="javascript:;" tid="1" >专业1</a></li><li><a href="javascript:;" tid="2" >专业2</a></li><li><a href="javascript:;" tid="3" >专业3</a></li></ul></div></dl>
+                         </div>
+                         <div class="inuptBox">
+                                <label for="">Q<span></span>Q：</label>
+                                <input type="text">
+                                <!-- <i>*</i> -->
+                         </div>
+                         <div class="inuptBox">
+                                <label for="">所在城市：</label>
+                                <input type="text">
+                         </div>
+                         <a href="javascript:;" type="submit" class="redBtn more" onclick="checkform()" style="margin-top:15px;"><i></i><span>提交</span><i></i></a>
+                    </form>
+                </div>
+               
+            </div>
+        </div>
+    
+    <script src="./js/zty.js"></script>
+</body>
+</html>
